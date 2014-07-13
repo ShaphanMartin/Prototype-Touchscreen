@@ -27,6 +27,7 @@ import java.util.Date;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JCheckBox;
+import java.awt.Toolkit;
 
 public class Login extends JFrame {
 	public static Login classAInstance = new Login();
@@ -59,6 +60,8 @@ public class Login extends JFrame {
 
 
 	public Login() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage("E:\\Pictures\\New folder (3)\\knife-and-fork-logo.png"));
+		setTitle("Login");
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -76,7 +79,7 @@ public class Login extends JFrame {
 		panel.add(lblUsername);
 
 		textUsername = new JTextField();
-		textUsername.setText("shaf");
+		//textUsername.setText("shaf");
 		textUsername.setBounds(228, 60, 86, 20);
 		panel.add(textUsername);
 		textUsername.setColumns(10);
@@ -86,7 +89,7 @@ public class Login extends JFrame {
 		panel.add(lblPassword);
 
 		textPassword = new JPasswordField();
-		textPassword.setText("shafpass");
+		//textPassword.setText("shafpass");
 		textPassword.setBounds(228, 102, 86, 20);
 		panel.add(textPassword);
 		textPassword.setColumns(10);

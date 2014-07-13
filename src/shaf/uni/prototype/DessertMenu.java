@@ -28,6 +28,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import java.awt.Toolkit;
 
 
 public class DessertMenu {
@@ -63,6 +64,7 @@ public class DessertMenu {
 	 */
 	private void initialize() {
 		frameDessertMenu = new JFrame();
+		frameDessertMenu.setIconImage(Toolkit.getDefaultToolkit().getImage("E:\\Pictures\\New folder (3)\\knife-and-fork-logo.png"));
 		frameDessertMenu.setTitle("Dessert");
 		frameDessertMenu.setBounds(100, 100, 450, 360);
 		frameDessertMenu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

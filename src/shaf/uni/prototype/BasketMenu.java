@@ -28,6 +28,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
+import java.awt.Toolkit;
 
 public class BasketMenu extends JFrame {
 	
@@ -70,6 +71,8 @@ public class BasketMenu extends JFrame {
 	 * Create the frame.
 	 */
 	public BasketMenu() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage("E:\\Pictures\\New folder (3)\\knife-and-fork-logo.png"));
+		setTitle("Basket");
 		initialize();
 		PopulateWindow();
 

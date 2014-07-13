@@ -28,6 +28,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import java.awt.Toolkit;
 
 public class StarterMenu extends JFrame {
 	DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
@@ -61,7 +62,7 @@ public class StarterMenu extends JFrame {
 	public StarterMenu() {
 		initialize();
 		PopulateWindow();
-		System.out.print(currentTime);
+		//System.out.print(currentTime);
 
 	}
 
@@ -70,6 +71,7 @@ public class StarterMenu extends JFrame {
 	 */
 	private void initialize() {
 		frmStarterMenu = new JFrame();
+		frmStarterMenu.setIconImage(Toolkit.getDefaultToolkit().getImage("E:\\Pictures\\New folder (3)\\knife-and-fork-logo.png"));
 		frmStarterMenu.setTitle("Starter Menu");
 		frmStarterMenu.setBounds(100, 100, 450, 360);
 		frmStarterMenu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

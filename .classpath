@@ -5,5 +5,6 @@
 	<classpathentry kind="lib" path="miglayout15-swing.jar" sourcepath="miglayout-src.zip"/>
 	<classpathentry kind="lib" path="E:/Program Files/MySQL/MySQL Server 5.1/mysql-connector-java-5.1.27-bin.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="E:/Downloads/google-api-translate-java-0.97.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

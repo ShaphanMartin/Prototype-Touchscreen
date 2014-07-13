@@ -5,6 +5,8 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class loginTest {
+	
+	String name = "Shaf";
 
 	@Test
 	public void test() {

@@ -19,6 +19,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
+import java.awt.Toolkit;
 
 public class BarMenu extends JFrame {
 
@@ -44,6 +45,8 @@ public class BarMenu extends JFrame {
 	 * Create the frame.
 	 */
 	public BarMenu() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage("E:\\Pictures\\New folder (3)\\knife-and-fork-logo.png"));
+		setTitle("Drinks");
 	initialize();
 	CheckData();
 	}

@@ -31,6 +31,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import java.awt.Toolkit;
 
 public class DrinkMenu extends JFrame{
 	public static int Difference = 0;
@@ -65,6 +66,7 @@ public class DrinkMenu extends JFrame{
 	 */
 	private void initialize() {
 		frameDrinkMenu = new JFrame();
+		frameDrinkMenu.setIconImage(Toolkit.getDefaultToolkit().getImage("E:\\Pictures\\New folder (3)\\knife-and-fork-logo.png"));
 		frameDrinkMenu.setTitle("Drinks Menu");
 		frameDrinkMenu.setBounds(100, 100, 450, 360);
 		frameDrinkMenu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -214,7 +216,7 @@ public class DrinkMenu extends JFrame{
 				btnImage1.setBounds(MoveLblRight, 20, 250, 200);
 				Image image = null;
 				int Start = Integer.valueOf((String) formatter.format(new Date()));
-				System.out.println("before "+ count +" " + Start);
+				//System.out.println("before "+ count +" " + Start);
 		        try {
 		            URL url = new URL(databaseImage1);
 		            image = ImageIO.read(url);
@@ -225,7 +227,7 @@ public class DrinkMenu extends JFrame{
 		 
 				btnImage1.setIcon( new ImageIcon(new ImageIcon(image).getImage().getScaledInstance(250, 200, btnImage1.WHEN_FOCUSED)));
 				int End = Integer.valueOf((String) formatter.format(new Date()));
-				System.out.println("after "+ count +" "  + End);
+				//System.out.println("after "+ count +" "  + End);
 				Drink_panel.add(btnImage1);
 				
 				MoveLblRight = MoveLblRight + 300;
@@ -235,7 +237,7 @@ public class DrinkMenu extends JFrame{
 			
 			Difference =  count/2;
 			
-			System.out.println(Difference);
+			//System.out.println(Difference);
 			
 			statement.close();
 			con.close();

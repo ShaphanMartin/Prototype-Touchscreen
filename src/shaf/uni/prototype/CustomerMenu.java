@@ -7,12 +7,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.UUID;
 
+import com.google.api.translate.Language;
+import com.google.api.translate.Translate;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 import javax.swing.border.EmptyBorder;
+import java.awt.Toolkit;
 
 public class CustomerMenu extends JFrame {
 
@@ -40,7 +44,9 @@ public class CustomerMenu extends JFrame {
 	 * Create the frame.
 	 */
 	public CustomerMenu() {
-		System.out.println(uniqueID);
+		setIconImage(Toolkit.getDefaultToolkit().getImage("E:\\Pictures\\New folder (3)\\knife-and-fork-logo.png"));
+		setTitle("Menu's");
+	//	System.out.println(uniqueID);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 503, 396);
 		contentPane = new JPanel();
