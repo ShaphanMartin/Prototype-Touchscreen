@@ -18,6 +18,7 @@ import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
+import java.util.UUID;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -35,6 +36,7 @@ public class BasketMenu extends JFrame {
 	public static BasketMenu classAInstance = new BasketMenu();
 	private static int length;
 	double totalprice = 0;
+	String uniqueID = UUID.randomUUID().toString();
 
 	public static int getLength() {
 		return length;
@@ -102,6 +104,8 @@ public class BasketMenu extends JFrame {
 		gbl_Button_panel.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
 		gbl_Button_panel.rowWeights = new double[]{0.0, Double.MIN_VALUE};
 		Button_panel.setLayout(gbl_Button_panel);
+		
+		
 
 		JButton btnRefresh = new JButton("Refresh");
 		btnRefresh.addActionListener(new ActionListener() {
@@ -122,6 +126,7 @@ public class BasketMenu extends JFrame {
 		btnRequestTheBill.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try{
+					
 					DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 					Date d = new Date();
 					Class.forName("com.mysql.jdbc.Driver");
@@ -134,7 +139,7 @@ public class BasketMenu extends JFrame {
 					UpdateSql.setString(1,Login.classAInstance.getTable());
 					PreparedStatement InsertSql = con.prepareStatement("INSERT INTO `Orders`(`Customer_Id`, `Total Price`,`Date`) "
 							+ "VALUES (?,?,?)");
-					InsertSql.setString(1, CustomerMenu.uniqueID);
+					InsertSql.setString(1, uniqueID);
 					InsertSql.setDouble(2, Double.valueOf(totalprice));
 					InsertSql.setString(3,dateFormat.format(d));
 					

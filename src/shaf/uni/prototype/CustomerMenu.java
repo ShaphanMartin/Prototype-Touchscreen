@@ -20,7 +20,7 @@ import java.awt.Toolkit;
 
 public class CustomerMenu extends JFrame {
 
-	static String uniqueID = UUID.randomUUID().toString();
+	//static String uniqueID = UUID.randomUUID().toString();
 
 	private JPanel contentPane;
 
